@@ -1,0 +1,12 @@
+version: '2.5'
+
+services:
+  # DNS
+  home-dns:
+    image: home-dns
+    ports:
+      - 53:53
+    volumes:
+      - ./DNS/arpa.zone:/etc/bind/arpa.zone
+      - ./DNS/named.conf:/etc/bind/named.conf
+    network_mode: host

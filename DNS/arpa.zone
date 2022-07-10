@@ -1,0 +1,15 @@
+$TTL 7D
+$ORIGIN arpa.
+@       IN      SOA     arpa. root.arpa.com. (
+                        4               ; serial, todays date + todays serial #
+                        8H              ; refresh, seconds
+                        2H              ; retry, seconds
+                        4W              ; expire, seconds
+                        1D )            ; minimum, seconds
+;
+;
+@           IN  NS  arpa.
+@           IN  A   192.168.1.15  ; DNS server
+dns         IN  A   192.168.1.15  ; DNS
+plex        IN  A   192.168.1.10  ; plex
+pritunl		IN  A   192.168.1.15  ; pritunl VPN
