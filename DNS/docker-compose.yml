@@ -10,3 +10,4 @@ services:
       - ./DNS/arpa.zone:/etc/bind/arpa.zone
       - ./DNS/named.conf:/etc/bind/named.conf
     network_mode: host
+    restart: on-failure
