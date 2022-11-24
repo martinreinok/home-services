@@ -5,7 +5,6 @@ distro-hostname ALL=(ALL) NOPASSWD:ALL
 # Install ZSH
 sudo apt-get install zsh wget curl git
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 nano ~/.zshrc
 ZSH_THEME="bira"
 (Root ZSH not recommended)
