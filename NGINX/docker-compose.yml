@@ -1,12 +1,20 @@
-version: '2.5'
-
+version: '3.8'
 services:
-  # NGINX
-  plex-nginx:
-    image: nginx
+  swag:
+    image: linuxserver/swag
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: Etc/UTC
+      URL: photos.martinreinok.com
+      VALIDATION: http
     ports:
+      - 443:443
       - 80:80
     volumes:
-      - ./NGINX/nginx.conf:/etc/nginx/nginx.conf:ro
-    network_mode: host
+      - /opt/home-services/NGINX/swag-conf:/config
     restart: on-failure
+    network_mode: host
