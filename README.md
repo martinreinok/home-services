@@ -16,9 +16,7 @@ Installed on Windows Server 2019
 Additionally Plex Media Server Service is installed for startup  
 
 ### NGINX
-Docker running on VM2  
-Has a separate VM for static IP (docker macvlan should also be possible)  
-Reverse proxy for PLEX as PLEX by default is running on port 32400  
+SWAG is used, with a custom configuration for IMMICH webserver.
 
 ### SAMBA
 Installed on Windows Server 2019  
@@ -27,5 +25,6 @@ Used for sharing PLEX movie library to add new movies and for sharing archive fo
 ## Port forwarding
 18646  -> 18646  # VPN  
 32400  -> 32400  # PLEX  
-
+443    -> 443    # IMMICH
+80     -> 80     # IMMICH (loopback)
 
